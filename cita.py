@@ -65,5 +65,6 @@ class Cita:
 ####PRUEBA
 m = Cita("Julian", "Medina", "13", "18/06/2000", "Gripita", "Dolex forte")
 m.setFecha("16/11/2018")
-m.setReceta("vape")
-
+m.setReceta("nada")
+m.getReceta()
+m.getFecha()
