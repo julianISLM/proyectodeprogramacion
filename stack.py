@@ -5,7 +5,7 @@ class Stack:
         self.items = []
 
     def isEmpty(self):
-        '''Hcae un test para observar si el Stack está vacío'''
+        '''Hace un test para observar si el Stack está vacío (returnando un booleano)'''
         return self.items == []
 
     def push(self, item):
