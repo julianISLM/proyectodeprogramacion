@@ -1,3 +1,5 @@
+
+
 class Cita:
 
     def __init__(self,nombre,apellido,edad,fecha,enfermedad,receta):
@@ -11,7 +13,7 @@ class Cita:
 
     def All(self):
         '''Da la información general del paciente'''
-        return ("El nombre del paciente es {0} {1}. Su edad {2}, su última visita fue el {3}. Tiene: {4}. Se le receto: {5}".format(self.name,
+        return ("El nombre del paciente es {0} {1}. Su edad {2}, su última visita fue el {3}. Tiene: {4}. Se le receto: {5}.".format(self.name,
                                                                                                                                           self.last,
                                                                                                                                           self.age,
                                                                                                                                           self.date,
@@ -41,7 +43,7 @@ class Cita:
 
     def getReceta(self):
         '''returna la última receta que llevó el paciente'''
-        return "Se le receto: {}".format(self.receta)
+        return "Se le recetó: {}".format(self.receta)
 
     def setFecha(self, fecha):
         '''Actualiza la fecha en el que paciente vinó por última vez'''
@@ -59,12 +61,10 @@ class Cita:
         '''Actualiza la enfermedad del paciente'''
         self.sick = enfermedad
 
-    
-    
+    def saveDate(self):
+        return self.date
 
-####PRUEBA
-m = Cita("Julian", "Medina", "13", "18/06/2000", "Gripa", "Dolex forte")
-m.setFecha("16/11/2018")
-m.setReceta("nada")
-m.getReceta()
-m.getFecha()
+    def saveReceta(self):
+        return self.receta
+   
+
