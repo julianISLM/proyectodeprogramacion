@@ -7,12 +7,12 @@ date = stack.Stack()
 receta = stack.Stack()
 
 def stack_date(x):
-    '''Agrega al Stack 'date' del paciente las diferentes fechas en las que vino'''
+    '''Agrega al Stack 'date' del paciente x las diferentes fechas en las que vino'''
     date.push(x.saveDate())
     return str(date)
     
 def stack_receta(x):
-    '''Agrega al Stack 'receta' las recetas del paciente'''
+    '''Agrega al Stack 'receta' las recetas del paciente x'''
     receta.push(x.saveReceta())
     return str(receta)
 
