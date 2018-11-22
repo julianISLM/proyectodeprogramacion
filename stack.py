@@ -5,7 +5,7 @@ class Stack:
         self.items = []
 
     def isEmpty(self):
-        '''Hace un test para observar si el Stack está vacío (returnando un booleano)'''
+        '''Hace un test para observar si el Stack está vacío'''
         return self.items == []
 
     def push(self, item):
@@ -17,11 +17,16 @@ class Stack:
         return self.items.pop()
 
     def peek(self):
-
+        """Retorna el último item puesto en el stack"""
         return self.items[len(self.items)-1]
 
     def size(self):
+        """Retorna el numero de items en el stack"""
         return len(self.items)
 
     def __str__(self):
         return str(self.items)
+
+    def clear(self):
+        while (self.isEmpty() == False):
+            self.pop()
