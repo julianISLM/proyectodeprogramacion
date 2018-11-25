@@ -13,13 +13,14 @@ class Cita:
 
     def All(self):
         '''Da la información general del paciente'''
-        return ("El nombre del paciente es {0} {1}. Su edad {2}, su última visita fue el {3}. Tiene: {4}. Se le receto: {5}.".format(self.name,
+
+        DatosDeLaCita = ("El nombre del paciente es {0} {1}. Su edad {2}, su última visita fue el {3}. Tiene: {4}. Se le receto: {5}.".format(self.name,
                                                                                                                                           self.last,
                                                                                                                                           self.age,
                                                                                                                                           self.date,
                                                                                                                                           self.sick,
                                                                                                                                           self.receta))
-    
+        return DatosDeLaCita
 
     def getNombre(self):
         '''returna solo el nombre del paciente'''
