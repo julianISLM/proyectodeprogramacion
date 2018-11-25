@@ -1,5 +1,3 @@
-
-
 class Cita:
 
     def __init__(self,nombre,apellido,edad,fecha,enfermedad,receta):
@@ -13,14 +11,13 @@ class Cita:
 
     def All(self):
         '''Da la información general del paciente'''
-
-        DatosDeLaCita = ("El nombre del paciente es {0} {1}. Su edad {2}, su última visita fue el {3}. Tiene: {4}. Se le receto: {5}.".format(self.name,
+        return ("El nombre del paciente es {0} {1}. Su edad {2}, su última visita fue el {3}. Tiene: {4}. Se le receto: {5}.".format(self.name,
                                                                                                                                           self.last,
                                                                                                                                           self.age,
                                                                                                                                           self.date,
                                                                                                                                           self.sick,
                                                                                                                                           self.receta))
-        return DatosDeLaCita
+    
 
     def getNombre(self):
         '''returna solo el nombre del paciente'''
@@ -40,7 +37,7 @@ class Cita:
 
     def getEnfermedad(self):
         '''returna lo que tiene el paciente'''
-        return "la última cita del paciente fue: {}".format(self.sick)
+        return "la última cita del paciente fue diagnosticado con: {}".format(self.sick)
 
     def getReceta(self):
         '''returna la última receta que llevó el paciente'''
@@ -67,5 +64,12 @@ class Cita:
 
     def saveReceta(self):
         return self.receta
-   
 
+    def saveEnfermedad(self):
+        return self.sick
+
+    def ls(self):
+        return [self.name,self.last,self.age,self.date,self.sick,self.receta]
+
+
+   
