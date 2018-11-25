@@ -1,7 +1,7 @@
-class Historial(cita, stack):
-    def __init__(self):
-        self.historial = []
+class Historial:
+    def __init__(self, paciente, historial = stack.Stack()):
+        self.historial = historial
+        historial.push(paciente.ls())
 
-    def AddCita(self):
-        self.historial.push(Cita.All(DatosDeLaCita))
-        return self.historial
+    def __str__(self):
+        return str(self.historial)
