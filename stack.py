@@ -1,8 +1,5 @@
 class Stack:
-    
-    '''Contiene todos los metodos necesarios de esta herramienta. Sin embargo, se creo
-    otro metodo adicional, "clear", el cual, elimina toda la informacion contenida en un stack.'''
-    
+
     def __init__(self):
         '''Crea un Stack vacío'''
         self.items = []
@@ -28,10 +25,8 @@ class Stack:
         return len(self.items)
 
     def __str__(self):
-        '''Retorna toda la informacion del Stack en forma de string'''
         return str(self.items)
 
     def clear(self):
-        '''Elimina automaticamente, todos los datos del stack'''
         while (self.isEmpty() == False):
             self.pop()
